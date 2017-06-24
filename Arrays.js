@@ -3,7 +3,7 @@ var assert = require('assert');
 /*Ejercicio 1: funcion que recibe un array y un numero, devuelve la multiplicacion de los
 elementos del array e inclyendo el numero*/
 function ejercicio1(arr, num){
-  if(isNaN(num)){num = 1};
+  if(isNaN(num)){num = 1};//Si no ingresan el parametro num
   return arr.reduce(function(producto,numero){return producto*numero;})*num;
 }
 
@@ -13,7 +13,7 @@ function ejercicio2 (arr, numero){
   if(!isNaN(numero)){
     return arr.filter(function(a){
     var primeras = a.toString().substr(0,3);
-    var ultimas = a.toString().substr(-3);
+    var ultimas = a.toString().substr(-3);//extrae los 3 ultimos numeros independiente del tamaño del numero
     return (primeras==numero || ultimas == numero);
     });
   } else {
@@ -59,6 +59,7 @@ function edades(arr) {
   return arr.filter(edad_ => edad_ > 18).map(edad => (new Date).getFullYear() - edad);
 }
 
+//Pruebas unitarias
 describe ('Ejercicio 1', function () {
   it ('Test ([4,4,12,5], 9) ', function () {
     assert.equal(8640, ejercicio1([4,4,12,5], 9));
