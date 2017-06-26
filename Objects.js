@@ -37,7 +37,7 @@ function hola(nombre, edad, pasatiempo) {
 }
 //pruebas unitarias con mocha
 var assert = require('assert');
-describe ('Ejerciocio 1', function () {
+describe ('Ejercicio 1', function () {
   it ('Test Rectangulo(3,6) ', function () {
     assert.equal(18, new Rectangulo(3,6).area());
   });
@@ -46,7 +46,7 @@ describe ('Ejerciocio 1', function () {
   });
 
 });
-describe ('Ejerciocio 2', function () {
+describe ('Ejercicio 2', function () {
   it ('Test nacimiento("Maria", 24, 12, 1995) ', function () {
     assert.equal('La edad actual de Maria es 21', new nacimiento('Maria', 24, 12, 1995).edad());
   });
@@ -57,7 +57,7 @@ describe ('Ejerciocio 2', function () {
     assert.equal('La edad actual de Melanie es 23', new nacimiento('Melanie', 26, 6, 1994).edad());
   });
 });
-describe ('Ejerciocio 3', function () {
+describe ('Ejercicio 3', function () {
   it ('Test hola("Melanie", 22, "jugar") ', function () {
     assert.equal('Hola, soy Melanie tengo 22 años y me gusta jugar', new hola("Melanie", 22, "jugar").saludo());
   });
