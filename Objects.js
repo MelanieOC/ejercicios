@@ -62,6 +62,6 @@ describe ('Ejerciocio 3', function () {
     assert.equal('Hola, soy Melanie tengo 22 años y me gusta jugar', new hola("Melanie", 22, "jugar").saludo());
   });
   it ('Test hola("Sheyla", 25, "programar") ', function () {
-    assert.equal('Hola, soy Melanie tengo 22 años y me gusta jugar', new hola("Melanie", 22, "jugar").saludo());
+    assert.equal('Hola, soy Sheyla tengo 25 años y me gusta programar', new hola("Sheyla", 25, "programar").saludo());
   });
 });
