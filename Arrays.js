@@ -26,7 +26,7 @@ el numero 'x'*/
 function ejercicio3 (arr, numero){
   var res = [];
   if(isNaN(numero)){numero = 1};
-  arr.forEach(function (a){
+  arr.forEach(a =>{
     if (a%numero == 0){
       res.push(a);
     }
@@ -37,15 +37,13 @@ function ejercicio3 (arr, numero){
 /*Ejercicio 4: funcion que recibe un array, retorna un array con el doble incrementado en uno de cada una
 de las posiciones*/
 function ejercicio4 (arr){
-  return arr.map(function(a){return a*2 + 1});
+  return arr.map(a => a*2 + 1});
 }
 
 /*Ejercicio 5: funcion que recibe un array con temperaturas en celsius y retorna las temperaturas en
 grados Fahrenheit*/
 function temperatura(celsius) {
-  return celsius.map(function (grados) {
-      return grados * (9/5) + 32;
-  })
+  return celsius.map(grados => grados * (9/5) + 32);
 }
 
 /*Ejercicio 6: funcion que recibe un array y retorna el producto de sus elementos*/
@@ -56,7 +54,7 @@ function multiplicacion (numeros){
 /*Ejercicio 7: funcion que recibe un array de edades y retorna un array con los años de nacimiento
 de los mayores de 18*/
 function edades(arr) {
-  return arr.filter(edad_ => edad_ > 18).map(edad => (new Date).getFullYear() - edad);
+  return arr.filter(edad_ => edad_ > 18 && edad %2==0).map(edad => (new Date).getFullYear() - edad);
 }
 
 //Pruebas unitarias
@@ -126,7 +124,7 @@ describe ('Ejercicio 6', function () {
 });
 
 describe ('Ejercicio 7', function () {
-  it ('Test [20, 16, 89, 6]) ', function () {
-    assert.deepEqual([1997, 1928], edades([20, 16, 89, 6]));
+  it ('Test [20, 16, 40, 6]) ', function () {
+    assert.deepEqual([1997, 1977], edades([20, 16, 40, 6]));
   });
 });

@@ -35,7 +35,6 @@ function hola(nombre, edad, pasatiempo) {
     return 'Hola, soy ' + this.nombre + ' tengo ' + this.edad + ' años y me gusta ' + this.pasatiempo;
   }
 }
-
 //pruebas unitarias con mocha
 var assert = require('assert');
 describe ('Ejerciocio 1', function () {
