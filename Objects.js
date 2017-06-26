@@ -2,7 +2,7 @@
 function Rectangulo(base, altura) {
   this.base = base;
   this.altura = altura;
-  this.area = function(){
+  this.area = function(){ //funcion que calcula el area base * altura
     return this.base * this.altura;
   }
 }
@@ -35,13 +35,17 @@ function hola(nombre, edad, pasatiempo) {
     return 'Hola, soy ' + this.nombre + ' tengo ' + this.edad + ' años y me gusta ' + this.pasatiempo;
   }
 }
-console.log(new hola("Melanie", 22, "jugar").saludo());
 
+//pruebas unitarias con mocha
 var assert = require('assert');
 describe ('Ejerciocio 1', function () {
   it ('Test Rectangulo(3,6) ', function () {
     assert.equal(18, new Rectangulo(3,6).area());
   });
+  it ('Test Rectangulo(10,2) ', function () {
+    assert.equal(20, new Rectangulo(10,2).area());
+  });
+
 });
 describe ('Ejerciocio 2', function () {
   it ('Test nacimiento("Maria", 24, 12, 1995) ', function () {
@@ -53,6 +57,9 @@ describe ('Ejerciocio 2', function () {
 });
 describe ('Ejerciocio 3', function () {
   it ('Test hola("Melanie", 22, "jugar") ', function () {
+    assert.equal('Hola, soy Melanie tengo 22 años y me gusta jugar', new hola("Melanie", 22, "jugar").saludo());
+  });
+  it ('Test hola("Sheyla", 25, "programar") ', function () {
     assert.equal('Hola, soy Melanie tengo 22 años y me gusta jugar', new hola("Melanie", 22, "jugar").saludo());
   });
 });
