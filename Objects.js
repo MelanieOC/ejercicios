@@ -54,6 +54,9 @@ describe ('Ejerciocio 2', function () {
   it ('Test nacimiento("Juan", 22, 2, 1995) ', function () {
     assert.equal('La edad actual de Juan es 22', new nacimiento('Juan', 22, 2, 1995).edad());
   });
+  it ('Test nacimiento("Melanie", 26, 6, 1994) ', function () {
+    assert.equal('La edad actual de Melanie es 23', new nacimiento('Melanie', 26, 6, 1994).edad());
+  });
 });
 describe ('Ejerciocio 3', function () {
   it ('Test hola("Melanie", 22, "jugar") ', function () {
